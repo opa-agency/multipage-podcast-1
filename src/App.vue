@@ -7,7 +7,7 @@
         <div
           class="hidden lg:sticky lg:top-0 lg:flex lg:w-16 lg:flex-none lg:items-center lg:px-12 lg:text-sm/7 lg:whitespace-nowrap lg:[writing-mode:vertical-rl]"
         >
-          <span class="font-mono text-slate-500">Hosted by</span>
+          <span class="font-mono text-slate-500">Găzduit de</span>
           <span class="mt-6 flex gap-6 font-bold text-slate-900">
             <span v-for="(host, idx) in hosts" :key="host">
               <span
@@ -27,7 +27,7 @@
           <RouterLink
             to="/"
             class="relative mx-auto block w-48 overflow-hidden rounded-lg bg-slate-200 shadow-xl shadow-slate-200 sm:w-64 sm:rounded-xl lg:w-auto lg:rounded-2xl"
-            aria-label="Homepage"
+            aria-label="Pagina principală"
           >
             <img
               class="w-full"
@@ -44,8 +44,7 @@
               <RouterLink to="/">Their Side</RouterLink>
             </p>
             <p class="mt-3 text-lg/8 font-medium text-slate-700">
-              Conversations with the most tragically misunderstood people of our
-              time.
+              Conversații cu cei mai tragic neînțeleși oameni ai timpului nostru.
             </p>
           </div>
           <AboutSection class="mt-12 hidden lg:block" />
@@ -57,7 +56,7 @@
                 :colors="['fill-indigo-300', 'fill-blue-300']"
                 class="h-2.5 w-2.5"
               />
-              <span class="ml-2.5">Listen</span>
+              <span class="ml-2.5">Ascultă</span>
             </h2>
             <div
               class="h-px bg-linear-to-r from-slate-200/0 via-slate-200 to-slate-200/0 lg:hidden"
@@ -100,7 +99,7 @@
           <AboutSection />
           <h2 class="mt-8 flex items-center font-mono text-sm/7 font-medium text-slate-900">
             <PersonIcon class="h-3 w-auto fill-slate-300" />
-            <span class="ml-2.5">Hosted by</span>
+            <span class="ml-2.5">Găzduit de</span>
           </h2>
           <div class="mt-2 flex gap-6 text-sm/7 font-bold text-slate-900">
             <span v-for="(host, idx) in hosts" :key="host">
@@ -143,6 +142,6 @@ const podcastLinks = [
   ['Spotify', SpotifyIcon],
   ['Apple Podcast', ApplePodcastIcon],
   ['Overcast', OvercastIcon],
-  ['RSS Feed', RSSIcon],
+  ['Flux RSS', RSSIcon],
 ]
 </script>

@@ -23,7 +23,7 @@
           <ForwardButton />
         </div>
         <Slider
-          label="Current time"
+          label="Timp curent"
           :max-value="duration"
           :step="1"
           :value="currentTime ?? playerCurrentTime"

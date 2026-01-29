@@ -3,7 +3,7 @@
     type="button"
     class="group relative rounded-md hover:bg-slate-100 focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:outline-hidden md:order-0"
     @click="player.toggleMute()"
-    :aria-label="player.muted ? 'Unmute' : 'Mute'"
+    :aria-label="isMuted ? 'Activează sunetul' : 'Dezactivează sunetul'"
   >
     <div class="absolute -inset-4 md:hidden" />
     <svg
@@ -14,7 +14,7 @@
       stroke-linejoin="round"
       class="h-6 w-6 fill-slate-500 stroke-slate-500 group-hover:fill-slate-700 group-hover:stroke-slate-700"
     >
-      <template v-if="player.muted">
+      <template v-if="isMuted">
         <path d="M12 6L8 10H6C5.44772 10 5 10.4477 5 11V13C5 13.5523 5.44772 14 6 14H8L12 18V6Z" />
         <path d="M16 10L19 13" fill="none" />
         <path d="M19 10L16 13" fill="none" />
@@ -32,8 +32,9 @@
 </template>
 
 <script setup>
-import { inject } from 'vue'
+import { computed, inject, unref } from 'vue'
 import { AudioPlayerKey } from '@/composables/useAudioPlayer'
 
 const player = inject(AudioPlayerKey)
+const isMuted = computed(() => unref(player.muted))
 </script>

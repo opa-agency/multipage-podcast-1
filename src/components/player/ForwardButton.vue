@@ -3,7 +3,7 @@
     type="button"
     class="group relative rounded-full focus:outline-hidden"
     @click="player.seekBy(amount)"
-    :aria-label="`Fast-forward ${amount} seconds`"
+    :aria-label="`Înainte ${amount} secunde`"
   >
     <div class="absolute -inset-4 -left-2 md:hidden" />
     <svg

@@ -3,7 +3,7 @@
     type="button"
     class="group relative rounded-full focus:outline-hidden"
     @click="player.seekBy(-amount)"
-    :aria-label="`Rewind ${amount} seconds`"
+    :aria-label="`Înapoi ${amount} secunde`"
   >
     <div class="absolute -inset-4 -right-2 md:hidden" />
     <svg
