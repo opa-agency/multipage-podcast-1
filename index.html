@@ -13,6 +13,16 @@
       rel="stylesheet"
       href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&display=swap"
     >
+    <script>
+      // Handle SPA routing on page refresh
+      (function() {
+        let redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.pathname) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
   </head>
   <body class="flex min-h-full">
     <div id="app"></div>
